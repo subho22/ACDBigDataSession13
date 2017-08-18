@@ -1,0 +1,9 @@
+1)
+scala> val input=sc.parallelize(Seq((1,2),(3,4),(3,6)))
+input: org.apache.spark.rdd.RDD[(Int, Int)] = ParallelCollectionRDD[1] at parallelize at <console>:21
+
+scala> input.collect
+res0: Array[(Int, Int)] = Array((1,2), (3,4), (3,6))
+
+2)
+scala> val input=sc.parallelize(Seq((a,0),(b,1),(c,2),(d,3),(e,4)))

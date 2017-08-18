@@ -1,0 +1,7 @@
+scala> val input = sc.parallelize(List(1,2,3,4,5,6))
+scala> val mapRDD = input.map(x=>x*x*x)
+scala> val filterRDD=mapRDD.filter(x=>if(x%2==0 && x%3==0)true else false)
+
+scala> filterRDD.collect
+res3: Array[Int] = Array(216)
+
